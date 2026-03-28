@@ -7,22 +7,23 @@ to get a job.
 2.Django
 3.PostgreSql
 4.Algorithm - TF-IDF
+
 ### User Profile ###
 (age, education, skills, interests)
 
         ↓
 
-Career Recommendation
+### Career Recommendation
 (baker, tailor, tutor, etc.)
 
         ↓
 
-Skill Gap Analysis
+### Skill Gap Analysis
 (matched vs missing skills)
 
         ↓
 
-Training Suggestions
+### Training Suggestions
 (courses or training centers)
 
 
