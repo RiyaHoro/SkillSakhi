@@ -18,12 +18,19 @@ from django.contrib import admin
 from django.urls import path, include
 
 from django.http import HttpResponse
-
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 def home(request):
     return HttpResponse("SkillSakhi backend running")
 urlpatterns = [
     path('', home),
     path('admin/', admin.site.urls),
+    # authentication
+    path('api/login/', TokenObtainPairView.as_view()),
+    path('api/token/refresh/', TokenRefreshView.as_view()),
+   
     path('api/users/', include('users.urls')),
     path('api/recommend/', include('recommendation.urls')),
 ]

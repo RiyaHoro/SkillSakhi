@@ -1,0 +1,11 @@
+skill,course_name,provider,link,difficulty
+Python,Python for Beginners,Coursera,https://coursera.org/python,Beginner
+Python,Complete Python Bootcamp,Udemy,https://udemy.com/python,Beginner
+Docker,Docker Fundamentals,Udemy,https://udemy.com/docker,Beginner
+Docker,Docker Deep Dive,Pluralsight,https://pluralsight.com/docker,Intermediate
+Kubernetes,Kubernetes Basics,Linux Foundation,https://training.linuxfoundation.org,Beginner
+SQL,SQL for Data Analysis,DataCamp,https://datacamp.com/sql,Beginner
+React,React Complete Guide,Udemy,https://udemy.com/react,Beginner
+Linux,Linux Essentials,edX,https://edx.org/linux,Beginner
+Excel,Excel for Data Analysis,Microsoft Learn,https://learn.microsoft.com/excel,Beginner
+Statistics,Statistics for Data Science,Coursera,https://coursera.org/statistics,Intermediate

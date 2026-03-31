@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Skill(models.Model):
     name = models.CharField(max_length=100)
@@ -15,7 +16,7 @@ class Interest(models.Model):
 
 
 class UserProfile(models.Model):
-
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     EDUCATION_CHOICES = [
         ("10th", "10th"),
         ("12th", "12th"),
