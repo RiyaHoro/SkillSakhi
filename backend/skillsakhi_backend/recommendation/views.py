@@ -10,8 +10,10 @@ from training.models import TrainingResource
 @api_view(['GET'])
 def recommend_career(request, user_id):
 
-    user = UserProfile.objects.get(id=user_id)
-
+    try:
+        user = UserProfile.objects.get(id=user_id)
+    except UserProfile.DoesNotExist:
+        return Response({"error": "Profile not found"}, status=404)
     user_skills = set(
         s.lower().strip() for s in user.skills.values_list('name', flat=True)
     )
@@ -114,13 +116,14 @@ def skill_gap_analysis(request):
                 })
 
         # SAVE RECOMMENDATION HISTORY
-        RecommendationHistory.objects.create(
-            user=user,
-            career=career.title,
-            matched_skills=list(matched),
-            missing_skills=list(missing),
-            match_percentage=match_percentage
-        )
+        if match_percentage > 0:
+            RecommendationHistory.objects.create(
+                user=user,
+                career=career.title,
+                matched_skills=", ".join(matched),
+                missing_skills=", ".join(missing),
+                match_percentage=match_percentage
+            )
 
         results.append({
             "career": career.title,
