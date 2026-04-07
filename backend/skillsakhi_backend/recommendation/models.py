@@ -1,6 +1,6 @@
 from django.db import models
 from users.models import Skill
-
+from django.contrib.auth.models import User
 
 class Career(models.Model):
 
@@ -21,3 +21,21 @@ class CareerSkill(models.Model):
 
     def __str__(self):
         return f"{self.career.title} - {self.skill.name}"
+    
+
+
+class RecommendationHistory(models.Model):
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    career = models.CharField(max_length=200)
+
+    matched_skills = models.JSONField()
+    missing_skills = models.JSONField()
+
+    match_percentage = models.IntegerField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.career}"

@@ -1,9 +1,8 @@
 from django.urls import path
-from .views import recommend_career
-from .views import skill_gap_analysis
-
+from .views import recommend_career, skill_gap_analysis, recommendation_history
 
 urlpatterns = [
-    path('<int:user_id>/', recommend_career),
-    path('gap/<int:user_id>/', skill_gap_analysis),
+    path("career/<int:user_id>/", recommend_career),
+    path("gap/", skill_gap_analysis),
+    path("history/", recommendation_history),
 ]
