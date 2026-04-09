@@ -28,9 +28,12 @@ urlpatterns = [
     path('', home),
     path('admin/', admin.site.urls),
     # authentication
+    
     path('api/login/', TokenObtainPairView.as_view()),
     path('api/token/refresh/', TokenRefreshView.as_view()),
-   
-    path('api/users/', include('users.urls')),
+    
+    #users
+    path("api/", include("users.urls")),
+    
     path('api/recommend/', include('recommendation.urls')),
 ]

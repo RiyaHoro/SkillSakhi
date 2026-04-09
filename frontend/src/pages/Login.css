@@ -1,0 +1,143 @@
+.login-bg {
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+}
+
+.login-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 18, 40, 0.52);
+}
+
+.login-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.12);
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 2.5rem 2.25rem 2rem;
+  width: 100%;
+  max-width: 380px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.login-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.login-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 4px;
+}
+
+.login-sub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+  margin: 0 0 1.75rem;
+}
+
+.login-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+.login-input {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 12px;
+  height: 40px;
+  outline: none;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.login-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.login-input:focus {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.login-forgot-row {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.login-forgot-link {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+}
+
+.login-forgot-link:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.login-btn {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.login-btn:hover {
+  opacity: 0.92;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.login-footer-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.login-footer-link:hover {
+  color: #fff;
+}
